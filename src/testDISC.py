@@ -1,20 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import numpy as np
-import os
-if os.uname().sysname == 'Darwin':
-    os.chdir('/Users/ecekuru/Projects')
-else:
-    os.chdir('/home/ecek/Projects')
-try:
-    from ASCAM.src.core import DISC
-except ImportError:
-    import sys
-    if os.uname().sysname == 'Darwin':
-        sys.path.append('/Users/ecekuru/Projects')
-    else:
-        sys.path.append('/home/ecek/Projects')
-    from ASCAM.src.core import DISC
+from ASCAM.src.core import DISC
 
 
 def fitdata(args, data, nameaddition=''):

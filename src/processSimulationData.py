@@ -2,22 +2,7 @@
 
 import argparse
 import numpy as np
-import os
-
-currentdir = os.getcwd()
-if os.uname().sysname == 'Darwin':
-    d = '/Users/ecekuru/Projects'
-    os.chdir(d)
-else:
-    d = '/home/ecek/Projects'
-    os.chdir(d)
-try:
-    from ASCAM.src.core.filtering import gaussian_filter
-except (ImportError, ModuleNotFoundError):
-    import sys
-    sys.path.append(d)
-    from ASCAM.src.core.filtering import gaussian_filter
-os.chdir(currentdir)
+from ASCAM.src.core.filtering import gaussian_filter
 
 
 def main(args):
